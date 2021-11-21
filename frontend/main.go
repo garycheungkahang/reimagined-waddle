@@ -5,6 +5,7 @@ import (
     "database/sql"
     _ "github.com/go-sql-driver/mysql"
 	"github.com/gin-gonic/gin"
+	"reimagined-waddle/frontend/method"
 )
 // import "net/http"
 
@@ -13,7 +14,7 @@ func main() {
 	// router := gin.Default()/\
 	r.LoadHTMLGlob("template/*.html")
 	db, err := sql.Open("mysql", "root:pass1@tcp(127.0.0.1:3306)/userlist")
-	
+	method.create("listedTable")
 	fmt.Println("this is database",db)
 	// results, err := db.Query("SELECT id, name FROM tags")
     // if there is an error opening the connection, handle it

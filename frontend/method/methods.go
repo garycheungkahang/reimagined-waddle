@@ -1,10 +1,11 @@
-package main
+package method
 
 import(
 	// "fmt"
     "database/sql"
     _ "github.com/go-sql-driver/mysql"
 	// "github.com/gin-gonic/gin"
+	
 )
 
 func create(name string) {
